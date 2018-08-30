@@ -57,8 +57,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         self.view.addSubview(myMapView)
         
         // 中心点の緯度経度.
-        let myLat: CLLocationDegrees = 37.506804
-        let myLon: CLLocationDegrees = 139.930531
+        let myLat: CLLocationDegrees = 37.92224
+        let myLon: CLLocationDegrees = 140.116683
         let myCoordinate: CLLocationCoordinate2D = CLLocationCoordinate2DMake(myLat, myLon) as CLLocationCoordinate2D
         
         // 縮尺.

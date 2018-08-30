@@ -8,8 +8,11 @@
 
 import UIKit
 
-class reTableViewCell: UITableViewCell {
+class ReTableViewCell: UITableViewCell {
 
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

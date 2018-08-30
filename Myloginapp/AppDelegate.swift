@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        AnalyticsConfiguration.shared().setAnalyticsCollectionEnabled(false)
+        //AnalyticsConfiguration.shared().setAnalyticsCollectionEnabled(false)
         
         return true
     }

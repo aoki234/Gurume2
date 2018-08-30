@@ -115,10 +115,10 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="AAu-Vc-vao">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ReTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="AAu-Vc-vao" customClass="ReTableViewCell" customModule="Myloginapp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ReTableViewCell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AAu-Vc-vao" id="9no-Pl-s2a" customClass="ReTableViewCell" customModule="Myloginapp" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AAu-Vc-vao" id="9no-Pl-s2a">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -159,6 +159,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="U68-DN-enk"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="iN1-c3-e2n" id="hIc-ta-aha"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P4Z-qb-9Pr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -345,6 +348,9 @@
                                         <integer key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="wYh-Eb-RYp" kind="show" id="wtZ-69-POq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="selectView" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr8-cQ-KTE">
                                 <rect key="frame" x="7" y="286" width="344" height="91"/>
@@ -439,13 +445,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wSL-WV-Ffx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="995" y="-617"/>
+            <point key="canvasLocation" x="994.39999999999998" y="-617.54122938530736"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="lW8-vq-tHU"/>
-        <segue reference="jKw-tk-78C"/>
-        <segue reference="mRA-qD-9DJ"/>
+        <segue reference="bgq-MU-jgA"/>
+        <segue reference="zmf-Sb-Xdg"/>
         <segue reference="o6C-Fe-34T"/>
     </inferredMetricsTieBreakers>
 </document>

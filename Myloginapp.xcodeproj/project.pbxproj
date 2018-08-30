@@ -15,7 +15,7 @@
 		1647FB8B213684A800C58713 /* GurunaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1647FB8A213684A800C58713 /* GurunaviViewController.swift */; };
 		1647FB8D213689E100C58713 /* ReTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1647FB8C213689E100C58713 /* ReTableViewCell.swift */; };
 		166621F8213443ED0045D4D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166621F7213443ED0045D4D8 /* AppDelegate.swift */; };
-		166621FA213443ED0045D4D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166621F9213443ED0045D4D8 /* ViewController.swift */; };
+		166621FA213443ED0045D4D8 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166621F9213443ED0045D4D8 /* ViewController2.swift */; };
 		166621FD213443ED0045D4D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 166621FB213443ED0045D4D8 /* Main.storyboard */; };
 		16662200213443ED0045D4D8 /* Myloginapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 166621FE213443ED0045D4D8 /* Myloginapp.xcdatamodeld */; };
 		16662202213443EF0045D4D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16662201213443EF0045D4D8 /* Assets.xcassets */; };
@@ -59,7 +59,7 @@
 		1647FB8C213689E100C58713 /* ReTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReTableViewCell.swift; sourceTree = "<group>"; };
 		166621F4213443ED0045D4D8 /* Myloginapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Myloginapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		166621F7213443ED0045D4D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		166621F9213443ED0045D4D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		166621F9213443ED0045D4D8 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		166621FC213443ED0045D4D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		166621FF213443ED0045D4D8 /* Myloginapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Myloginapp.xcdatamodel; sourceTree = "<group>"; };
 		16662201213443EF0045D4D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 				1647FB862136843400C58713 /* swift-pic.png */,
 				1647FB80213681B900C58713 /* SelectViewController.swift */,
 				166621F7213443ED0045D4D8 /* AppDelegate.swift */,
-				166621F9213443ED0045D4D8 /* ViewController.swift */,
+				166621F9213443ED0045D4D8 /* ViewController2.swift */,
 				166621FB213443ED0045D4D8 /* Main.storyboard */,
 				16662201213443EF0045D4D8 /* Assets.xcassets */,
 				16662203213443EF0045D4D8 /* LaunchScreen.storyboard */,
@@ -357,12 +357,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Myloginapp/Pods-Myloginapp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
@@ -372,12 +374,14 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
@@ -434,7 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16662200213443ED0045D4D8 /* Myloginapp.xcdatamodeld in Sources */,
-				166621FA213443ED0045D4D8 /* ViewController.swift in Sources */,
+				166621FA213443ED0045D4D8 /* ViewController2.swift in Sources */,
 				41410D4E21350D2200C35739 /* RecommendViewController.swift in Sources */,
 				41410D4C21350D0300C35739 /* ChatViewController.swift in Sources */,
 				166621F8213443ED0045D4D8 /* AppDelegate.swift in Sources */,

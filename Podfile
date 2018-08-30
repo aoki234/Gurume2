@@ -10,7 +10,7 @@ target 'Myloginapp' do
   pod 'Firebase/Database'
   pod 'JSQMessagesViewController'
   pod 'Alamofire'
-
+  pod 'SwiftyJSON'
   # Pods for Myloginapp
 
   target 'MyloginappTests' do
