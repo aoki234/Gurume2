@@ -10,18 +10,18 @@ import UIKit
 
 class RecommendViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    var TableTitle = [ ["menuTitle01", "title01", "title02"],
-                       ["menuTitle02", "title03", "title04"],
+    var TableTitle = [ ["Name", "UserName", "NickName"],
+                       ["address", "email", "passward"],
                        
-                       ["menuTitle03", "menuTitle05", "menuTitle06"],
-                       ["menuTitle04", "menuTitle07"]
+                       ["Detail", "Sex", "Birthday"],
+                       ["location", "habitant"]
     ]
     
     
-    var TableSubtitle = [ ["", "subtitle02", "subtitle03"],
-                          ["","subtitle05", "subtitle06"],
-                          ["", "subtitle06", "subtitle07"],
-                          ["", "subtitle08"]
+    var TableSubtitle = [ ["", "aoki234", "kessyobanchan"],
+                          ["","yonezawa_hack@yamagata.gmail.com", "Yoshitune"],
+                          ["", "Man", "2011/03/11"],
+                          ["", "Sendai"]
     ]
     
     

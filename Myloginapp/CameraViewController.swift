@@ -89,10 +89,14 @@ UINavigationControllerDelegate{
         if error != nil {
             print(error.code)
             label.text = "Save Failed !"
+            print("保存の失敗")
+            
         }
         else{
             label.text = "Save Succeeded"
+            
         }
+        
     }
     
     // アルバムを表示

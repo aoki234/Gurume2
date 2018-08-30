@@ -11,7 +11,14 @@ import UIKit
 class ReTableViewCell: UITableViewCell {
 
     
+    @IBOutlet weak var reimageView: UIImageView!
     
+    
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    @IBOutlet weak var foodLabel: UILabel!
+    
+    @IBOutlet weak var locationLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

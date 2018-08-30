@@ -24,6 +24,7 @@
 		16662210213443EF0045D4D8 /* MyloginappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1666220F213443EF0045D4D8 /* MyloginappTests.swift */; };
 		1666221B213443EF0045D4D8 /* MyloginappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1666221A213443EF0045D4D8 /* MyloginappUITests.swift */; };
 		16662276213504EF0045D4D8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16662275213504EF0045D4D8 /* SettingViewController.swift */; };
+		1699923721384E2600C9E2EE /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1699923621384E2600C9E2EE /* RequestViewController.swift */; };
 		2B2703DA64E75E0E1904F6A1 /* Pods_Myloginapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4A62A04ABD20B9E6026932 /* Pods_Myloginapp.framework */; };
 		41410D4C21350D0300C35739 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410D4B21350D0300C35739 /* ChatViewController.swift */; };
 		41410D4E21350D2200C35739 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410D4D21350D2200C35739 /* RecommendViewController.swift */; };
@@ -74,6 +75,7 @@
 		1666221A213443EF0045D4D8 /* MyloginappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyloginappUITests.swift; sourceTree = "<group>"; };
 		1666221C213443EF0045D4D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16662275213504EF0045D4D8 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		1699923621384E2600C9E2EE /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = SOURCE_ROOT; };
 		1BE96BB92FB6DC1F7144EB67 /* Pods-MyloginappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyloginappUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyloginappUITests/Pods-MyloginappUITests.release.xcconfig"; sourceTree = "<group>"; };
 		36490EAB2F09B15EFE38EA85 /* Pods-MyloginappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyloginappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyloginappTests/Pods-MyloginappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		41410D4B21350D0300C35739 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		166621F6213443ED0045D4D8 /* Myloginapp */ = {
 			isa = PBXGroup;
 			children = (
+				1699923621384E2600C9E2EE /* RequestViewController.swift */,
 				1647FB8A213684A800C58713 /* GurunaviViewController.swift */,
 				1647FB862136843400C58713 /* swift-pic.png */,
 				1647FB80213681B900C58713 /* SelectViewController.swift */,
@@ -212,6 +215,7 @@
 				166621F1213443ED0045D4D8 /* Frameworks */,
 				166621F2213443ED0045D4D8 /* Resources */,
 				D7FE70E0AA6A45EB75E777FD /* [CP] Embed Pods Frameworks */,
+				B4B2120FAC97B316E599287D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -353,6 +357,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B4B2120FAC97B316E599287D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Myloginapp/Pods-Myloginapp-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Myloginapp/Pods-Myloginapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D7FE70E0AA6A45EB75E777FD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,14 +382,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Myloginapp/Pods-Myloginapp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
@@ -377,14 +399,14 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
@@ -442,6 +464,7 @@
 			files = (
 				16222C642137790800276E2A /* CameraViewController.swift in Sources */,
 				16662200213443ED0045D4D8 /* Myloginapp.xcdatamodeld in Sources */,
+				1699923721384E2600C9E2EE /* RequestViewController.swift in Sources */,
 				166621FA213443ED0045D4D8 /* ViewController2.swift in Sources */,
 				41410D4E21350D2200C35739 /* RecommendViewController.swift in Sources */,
 				41410D4C21350D0300C35739 /* ChatViewController.swift in Sources */,

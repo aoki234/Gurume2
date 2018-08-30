@@ -9,8 +9,7 @@ target 'Myloginapp' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'JSQMessagesViewController'
-  pod 'Alamofire'
-  pod 'SwiftyJSON'
+  pod 'TwitterKit'
   # Pods for Myloginapp
 
   target 'MyloginappTests' do
