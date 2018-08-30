@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16222C642137790800276E2A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16222C632137790800276E2A /* CameraViewController.swift */; };
 		1647FB7B2136344300C58713 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1647FB7A2136344300C58713 /* MapViewController.swift */; };
 		1647FB81213681BA00C58713 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1647FB80213681B900C58713 /* SelectViewController.swift */; };
 		1647FB872136843400C58713 /* swift-pic.png in Resources */ = {isa = PBXBuildFile; fileRef = 1647FB862136843400C58713 /* swift-pic.png */; };
@@ -52,6 +53,7 @@
 		013324CE7DE3BA08CDB572FE /* Pods-Myloginapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myloginapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Myloginapp/Pods-Myloginapp.debug.xcconfig"; sourceTree = "<group>"; };
 		0385F28EBE55E3909F4AA862 /* Pods-Myloginapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myloginapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Myloginapp/Pods-Myloginapp.release.xcconfig"; sourceTree = "<group>"; };
 		0F4A62A04ABD20B9E6026932 /* Pods_Myloginapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Myloginapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16222C632137790800276E2A /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		1647FB7A2136344300C58713 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1647FB80213681B900C58713 /* SelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectViewController.swift; path = "../../../Desktop/summer-swift/Myloginapp/Myloginapp/SelectViewController.swift"; sourceTree = "<group>"; };
 		1647FB862136843400C58713 /* swift-pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "swift-pic.png"; path = "../../../Desktop/swift-pic.png"; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				41410D4D21350D2200C35739 /* RecommendViewController.swift */,
 				1647FB7A2136344300C58713 /* MapViewController.swift */,
 				1647FB8C213689E100C58713 /* ReTableViewCell.swift */,
+				16222C632137790800276E2A /* CameraViewController.swift */,
 			);
 			path = Myloginapp;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16222C642137790800276E2A /* CameraViewController.swift in Sources */,
 				16662200213443ED0045D4D8 /* Myloginapp.xcdatamodeld in Sources */,
 				166621FA213443ED0045D4D8 /* ViewController2.swift in Sources */,
 				41410D4E21350D2200C35739 /* RecommendViewController.swift in Sources */,
@@ -749,7 +753,7 @@
 				1666221E213443EF0045D4D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		1666221F213443EF0045D4D8 /* Build configuration list for PBXNativeTarget "Myloginapp" */ = {
 			isa = XCConfigurationList;
@@ -758,7 +762,7 @@
 				16662221213443EF0045D4D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		16662222213443EF0045D4D8 /* Build configuration list for PBXNativeTarget "MyloginappTests" */ = {
 			isa = XCConfigurationList;
@@ -767,7 +771,7 @@
 				16662224213443EF0045D4D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		16662225213443EF0045D4D8 /* Build configuration list for PBXNativeTarget "MyloginappUITests" */ = {
 			isa = XCConfigurationList;
@@ -776,7 +780,7 @@
 				16662227213443EF0045D4D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

@@ -57,8 +57,8 @@ class ChatViewController: JSQMessagesViewController {
         automaticallyScrollsToMostRecentMessage = true
         
         // 自分のsenderId, senderDisplayNameを設定
-        self.senderId = "user2"
-        self.senderDisplayName = "Mike"
+        self.senderId = "user1"
+        self.senderDisplayName = "Mike1"
         
         // 吹き出しの設定
         let bubbleFactory = JSQMessagesBubbleImageFactory()
