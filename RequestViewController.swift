@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
 
 class RequestViewController: UIViewController,UITextFieldDelegate {
 
@@ -24,9 +24,9 @@ class RequestViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var cancelBUtton: UIButton!
     
     
-    var ref: DatabaseReference!
+    //var ref: DatabaseReference!
     
-    func setupFirebase() {
+    /*func setupFirebase() {
         // DatabaseReferenceのインスタンス化
         ref = Database.database().reference()
         
@@ -39,7 +39,7 @@ class RequestViewController: UIViewController,UITextFieldDelegate {
             let name = snapshotValue["name"] as! String
             print(snapshot.value!)
         })
-    }
+ }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,10 +47,10 @@ class RequestViewController: UIViewController,UITextFieldDelegate {
         locationTextfield.delegate = self
         foodTextField.delegate = self
         
-        var senderId = "user1"
-        var senderDisplayName = "Mike1"
+        //var senderId = "user1"
+       // var senderDisplayName = "Mike1"
         
-        setupFirebase()
+       // setupFirebase()
 
         // Do any additional setup after loading the view.
     }
@@ -61,13 +61,15 @@ class RequestViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func registerbtn(_ sender: Any) {
-        if let price = priceTextfield.text, let location = locationTextfield.text, let food = foodTextField.text {
+        /*if let price = priceTextfield.text, let location = locationTextfield.text, let food = foodTextField.text {
             let post1 = ["from": location, "name": food, "text":price]
             let post1Ref = ref.childByAutoId()
             post1Ref.setValue(post1)
-            
+            */
+        
+        
         }
-    }
+    
     
     /*
     // MARK: - Navigation

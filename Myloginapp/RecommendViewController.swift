@@ -20,9 +20,11 @@ class RecommendViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     var TableSubtitle = [ ["", "aoki234", "kessyobanchan"],
                           ["","yonezawa_hack@yamagata.gmail.com", "Yoshitune"],
-                          ["", "Man", "2011/03/11"],
+                          ["", "Man", "1997/04/19"],
                           ["", "Sendai"]
     ]
+    
+    var images = ["ちょまど8.jpg","剛力彩芽7.jpg","池澤あやか4.jpg"]
     
     
     
@@ -33,6 +35,19 @@ class RecommendViewController: UIViewController,UITableViewDelegate,UITableViewD
             super.viewDidLoad()
             tableView.delegate = self
             tableView.dataSource = self
+            
+            //let image4 = UIImage(named: "ちょまど８.jpg")
+            
+            
+            //let image1:UIImage = UIImage(named: "ちょまど８.jpg")!
+            //let image2:UIImage = UIImage(named: "剛力彩芽３.jpg")!
+            //let image3:UIImage = UIImage(named: "池澤あやか3.jpg")!
+            
+            //var images:Array<UIImage> = []
+
+           // images.append(image1)
+           // images.append(image2)
+            //images.append(image3)
         }
         
         
@@ -57,8 +72,12 @@ class RecommendViewController: UIViewController,UITableViewDelegate,UITableViewD
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "ReTanbleViewCell")
+            
             cell.textLabel?.text = TableTitle[indexPath.section][indexPath.row + 1]
             cell.detailTextLabel?.text = TableSubtitle[indexPath.section][indexPath.row + 1]
+
+            //cell.reimageView?.image = UIImage(named: images[indexPath.row])
+
             return cell
         }
         

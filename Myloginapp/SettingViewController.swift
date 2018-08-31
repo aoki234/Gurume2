@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -18,12 +19,35 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     let kind = ["Chinese","Japanese","USA"]
     
+    var images = ["ちょまど7.jpg","剛力彩芽7.jpg","池澤あやか4.jpg"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
 
         // Do any additional setup after loading the view.
+        
+        var senderId = "user1"
+        var senderDisplayName = "Mike1"
+        
+        var ref: DatabaseReference!
+        
+        ref = Database.database().reference()
+        
+        //let userID = Auth.auth().currentUser?.uid
+        ref.child("gurumeproject").observe(DataEventType.childAdded, with: { (snapshot) -> Void in
+            let snapshotValue = snapshot.value as! NSDictionary
+            let text = snapshotValue["text"] as! String
+            let sender = snapshotValue["from"] as! String
+            let name = snapshotValue["name"] as! String
+            print(snapshot.value!)
+            print(text)
+            print(name)
+            print(sender)
+        })
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +65,7 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
         cell.priceLabel.text = price[indexPath.row]
         cell.locationLabel.text = location[indexPath.row]
         cell.foodLabel.text = kind[indexPath.row]
+        cell.reimageView.image = UIImage(named: images[indexPath.row])
         
         return cell
     }

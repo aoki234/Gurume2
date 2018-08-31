@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         
-        TWTRTwitter.sharedInstance().application(app, open: url, options: options)
+        //TWTRTwitter.sharedInstance().application(app, open: url, options: options)
         
         //AnalyticsConfiguration.shared().setAnalyticsCollectionEnabled(false)
         

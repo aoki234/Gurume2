@@ -10,8 +10,8 @@ import UIKit
 
 class ReTableViewCell: UITableViewCell {
 
-    
     @IBOutlet weak var reimageView: UIImageView!
+    
     
     
     @IBOutlet weak var priceLabel: UILabel!
