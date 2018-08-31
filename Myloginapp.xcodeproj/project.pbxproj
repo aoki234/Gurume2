@@ -29,6 +29,8 @@
 		169992492138D19400C9E2EE /* ちょまど7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 169992482138D19400C9E2EE /* ちょまど7.jpg */; };
 		1699924B2138D1B800C9E2EE /* 剛力彩芽7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1699924A2138D1B800C9E2EE /* 剛力彩芽7.jpg */; };
 		1699924D2138D21800C9E2EE /* 池澤あやか4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1699924C2138D21800C9E2EE /* 池澤あやか4.jpg */; };
+		1699924F2138E77900C9E2EE /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1699924E2138E77900C9E2EE /* CoreDataHelper.swift */; };
+		169992522138F4DE00C9E2EE /* Travel_Log.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 169992502138F4DE00C9E2EE /* Travel_Log.xcdatamodeld */; };
 		2B2703DA64E75E0E1904F6A1 /* Pods_Myloginapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4A62A04ABD20B9E6026932 /* Pods_Myloginapp.framework */; };
 		41410D4C21350D0300C35739 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410D4B21350D0300C35739 /* ChatViewController.swift */; };
 		41410D4E21350D2200C35739 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41410D4D21350D2200C35739 /* RecommendViewController.swift */; };
@@ -84,6 +86,8 @@
 		169992482138D19400C9E2EE /* ちょまど7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ちょまど7.jpg"; sourceTree = "<group>"; };
 		1699924A2138D1B800C9E2EE /* 剛力彩芽7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "剛力彩芽7.jpg"; sourceTree = "<group>"; };
 		1699924C2138D21800C9E2EE /* 池澤あやか4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "池澤あやか4.jpg"; sourceTree = "<group>"; };
+		1699924E2138E77900C9E2EE /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = "../../Travel Log - Core Data and theming/Travel Log/CoreDataHelper.swift"; sourceTree = "<group>"; };
+		169992512138F4DE00C9E2EE /* Travel_Log.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Travel_Log.xcdatamodel; sourceTree = "<group>"; };
 		1BE96BB92FB6DC1F7144EB67 /* Pods-MyloginappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyloginappUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyloginappUITests/Pods-MyloginappUITests.release.xcconfig"; sourceTree = "<group>"; };
 		36490EAB2F09B15EFE38EA85 /* Pods-MyloginappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyloginappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyloginappTests/Pods-MyloginappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		41410D4B21350D0300C35739 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -149,11 +153,13 @@
 		166621F6213443ED0045D4D8 /* Myloginapp */ = {
 			isa = PBXGroup;
 			children = (
+				1699924E2138E77900C9E2EE /* CoreDataHelper.swift */,
 				1699924A2138D1B800C9E2EE /* 剛力彩芽7.jpg */,
 				1699924C2138D21800C9E2EE /* 池澤あやか4.jpg */,
 				169992482138D19400C9E2EE /* ちょまど7.jpg */,
 				169992402138C47700C9E2EE /* FirstViewController.swift */,
 				1699923E2138C44F00C9E2EE /* RequestViewController.swift */,
+				169992502138F4DE00C9E2EE /* Travel_Log.xcdatamodeld */,
 				1647FB8A213684A800C58713 /* GurunaviViewController.swift */,
 				1647FB862136843400C58713 /* swift-pic.png */,
 				1647FB80213681B900C58713 /* SelectViewController.swift */,
@@ -484,6 +490,7 @@
 			files = (
 				16222C642137790800276E2A /* CameraViewController.swift in Sources */,
 				1699923F2138C44F00C9E2EE /* RequestViewController.swift in Sources */,
+				169992522138F4DE00C9E2EE /* Travel_Log.xcdatamodeld in Sources */,
 				16662200213443ED0045D4D8 /* Myloginapp.xcdatamodeld in Sources */,
 				166621FA213443ED0045D4D8 /* ViewController2.swift in Sources */,
 				41410D4E21350D2200C35739 /* RecommendViewController.swift in Sources */,
@@ -492,6 +499,7 @@
 				166621F8213443ED0045D4D8 /* AppDelegate.swift in Sources */,
 				16662276213504EF0045D4D8 /* SettingViewController.swift in Sources */,
 				1647FB8D213689E100C58713 /* ReTableViewCell.swift in Sources */,
+				1699924F2138E77900C9E2EE /* CoreDataHelper.swift in Sources */,
 				1647FB8B213684A800C58713 /* GurunaviViewController.swift in Sources */,
 				1647FB81213681BA00C58713 /* SelectViewController.swift in Sources */,
 				1647FB7B2136344300C58713 /* MapViewController.swift in Sources */,
@@ -836,6 +844,16 @@
 			);
 			currentVersion = 166621FF213443ED0045D4D8 /* Myloginapp.xcdatamodel */;
 			path = Myloginapp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		169992502138F4DE00C9E2EE /* Travel_Log.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				169992512138F4DE00C9E2EE /* Travel_Log.xcdatamodel */,
+			);
+			currentVersion = 169992512138F4DE00C9E2EE /* Travel_Log.xcdatamodel */;
+			path = Travel_Log.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

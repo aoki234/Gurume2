@@ -13,6 +13,14 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
     @IBOutlet weak var tableView: UITableView!
     
+    var travelLog = [TravelItem]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    
+    
     let price = ["500","800","1700"]
     
     let location = ["Yonezawa","NIkko","Toyota"]
@@ -26,8 +34,11 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
 
-        // Do any additional setup after loading the view.
+        travelLog = CoreDataHelper.retrieveTravelItems()
         
+        
+        // Do any additional setup after loading the view.
+        /*
         var senderId = "user1"
         var senderDisplayName = "Mike1"
         
@@ -46,7 +57,7 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
             print(name)
             print(sender)
         })
-        
+        */
         
     }
 
@@ -56,15 +67,24 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return location.count
+        //return location.count
+        return travelLog.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReTableViewCell", for: indexPath) as! ReTableViewCell
         
-        cell.priceLabel.text = price[indexPath.row]
-        cell.locationLabel.text = location[indexPath.row]
-        cell.foodLabel.text = kind[indexPath.row]
+        let travelItem = travelLog[indexPath.row]
+        
+        //cell.priceLabel.text = price[indexPath.row]
+        cell.priceLabel.text = travelItem.end
+        //cell.locationLabel.text = location[indexPath.row]
+        cell.locationLabel.text = travelItem.location
+        //cell.foodLabel.text = kind[indexPath.row]
+        cell.foodLabel.text = travelItem.notes
+        
+        
+        
         cell.reimageView.image = UIImage(named: images[indexPath.row])
         
         return cell
@@ -99,6 +119,17 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
         // ④ Alertを表示
         present(alert, animated: true, completion: nil)
         
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let travelItemToDelete = travelLog[indexPath.row]
+            CoreDataHelper.delete(travelItem: travelItemToDelete)
+            
+            travelLog = CoreDataHelper.retrieveTravelItems()
+        }
     }
     
     
